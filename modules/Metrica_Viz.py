@@ -221,7 +221,7 @@ def save_match_clip(hometeam,awayteam, fpath, fname='clip_test', figax=None, fra
     plt.close(fig)
 
 
-def plot_events( events, figax=None, field_dimen = (106.0,68), indicators = ['Marker','Arrow'], color='r', marker_style = 'o', alpha = 0.5, annotate=False):
+def plot_events( events, figax=None, field_dimen = (106.0,68), indicators = ['Marker','Arrow'], color='r', marker_style = 'o', alpha = 0.5, annotate=False, remove_type_from_annotation=False):
     """ plot_events( events )
 
     Plots Metrica event positions on a football pitch. event data can be a single or several rows of a data frame. All distances should be in meters.
@@ -249,11 +249,14 @@ def plot_events( events, figax=None, field_dimen = (106.0,68), indicators = ['Ma
         fig,ax = figax
     for i,row in events.iterrows():
         if 'Marker' in indicators:
-            ax.plot(  row['Start X'], row['Start Y'], color+marker_style, alpha=alpha )
+            ax.plot(  row['Start X'], row['Start Y'], color+marker_style, alpha=alpha, markersize=4 )
         if 'Arrow' in indicators:
             ax.annotate("", xy=row[['End X','End Y']], xytext=row[['Start X','Start Y']], alpha=alpha, arrowprops=dict(alpha=alpha,width=0.5,headlength=4.0,headwidth=4.0,color=color),annotation_clip=False)
         if annotate:
-            textstring = row['Type'] + ': ' + row['From']
+            if remove_type_from_annotation:
+                textstring = row['From'][6:]
+            else:
+                textstring = row['Type'] + ': ' + row['From'][6:]
             ax.text( row['Start X'], row['Start Y'], textstring, fontsize=10, color=color)
     return fig,ax
 
