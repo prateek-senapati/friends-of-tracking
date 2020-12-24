@@ -107,7 +107,7 @@ for player in home_summary.index:
     # sprinting (greater than 7 m/s)
     player_distance = tracking_home.loc[ tracking_home[column] >= 7, column].sum()/25./1000
     sprinting.append( player_distance )
-    
+
 home_summary['Walking [km]'] = walking
 home_summary['Jogging [km]'] = jogging
 home_summary['Running [km]'] = running
@@ -116,7 +116,7 @@ home_summary['Sprinting [km]'] = sprinting
 # make a clustered bar chart of distance covered for each player at each speed
 ax = home_summary[['Walking [km]','Jogging [km]','Running [km]','Sprinting [km]']].plot.bar(colormap='coolwarm')
 ax.set_xlabel('Player')
-ax.set_ylabel('Distance covered [m]')
+ax.set_ylabel('Distance covered [km]')
 
 # sustained sprints: how many sustained sprints per match did each player complete? Defined as maintaining a speed > 7 m/s for at least 1 second
 nsprints = []
@@ -129,7 +129,7 @@ for player in home_summary.index:
     player_sprints = np.diff( 1*( np.convolve( 1*(tracking_home[column]>=sprint_threshold), np.ones(sprint_window), mode='same' ) >= sprint_window ) )
     nsprints.append( np.sum( player_sprints == 1 ) )
 home_summary['# sprints'] = nsprints
-         
+
 # Plot the trajectories for each of player 10's sprints
 player = '10'
 column = 'Home_' + player + '_speed' # spped
@@ -144,5 +144,5 @@ fig,ax = mviz.plot_pitch()
 for s,e in zip(player_sprints_start,player_sprints_end):
     ax.plot(tracking_home[column_x].iloc[s],tracking_home[column_y].iloc[s],'ro')
     ax.plot(tracking_home[column_x].iloc[s:e+1],tracking_home[column_y].iloc[s:e+1],'r')
-    
+
 # END
