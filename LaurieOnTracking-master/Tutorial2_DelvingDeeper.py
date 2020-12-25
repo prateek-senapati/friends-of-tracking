@@ -132,7 +132,7 @@ home_summary['# sprints'] = nsprints
 
 # Plot the trajectories for each of player 10's sprints
 player = '10'
-column = 'Home_' + player + '_speed' # spped
+column = 'Home_' + player + '_speed' # speed
 column_x = 'Home_' + player + '_x' # x position
 column_y = 'Home_' + player + '_y' # y position
 # same trick as before to find start and end indices of windows of size 'sprint_window' in which player speed was above the sprint_threshold
