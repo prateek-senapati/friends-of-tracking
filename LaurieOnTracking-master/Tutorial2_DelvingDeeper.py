@@ -114,7 +114,7 @@ home_summary['Running [km]'] = running
 home_summary['Sprinting [km]'] = sprinting
 
 # make a clustered bar chart of distance covered for each player at each speed
-ax = home_summary[['Walking [km]','Jogging [km]','Running [km]','Sprinting [km]']].plot.bar(colormap='coolwarm')
+ax = home_summary[['Walking [km]','Jogging [km]','Running [km]','Sprinting [km]']].plot.bar(colormap='viridis')
 ax.set_xlabel('Player')
 ax.set_ylabel('Distance covered [km]')
 
