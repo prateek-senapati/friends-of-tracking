@@ -10,4 +10,4 @@ This is a repository to showcase the skills I have learnt while completing a foo
 
 4. Measuring the physical performance of players using tracking data ([notebook](https://github.com/prateek-senapati/friends-of-tracking/blob/main/4.%20Physical%20Performance%20Analysis.ipynb), [FoT video](https://www.youtube.com/watch?v=VX3T-4lB2o0&list=PLedeYskZY0vBOdQ6Uc9eZjZ2-nz1JT3R7&index=9))
 
-*I will be adding more work of mine to this list as and when I work on any new concept or skill learnt in this course.*
+__Note:__ *I will be adding more work of mine to this list as and when I work on any new concept or skill learnt in this course.*
