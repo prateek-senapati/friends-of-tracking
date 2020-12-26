@@ -15,7 +15,7 @@ UPDATE for tutorial 4: plot_pitchcontrol_for_event no longer requires 'xgrid' an
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.animation as animation
-import modules.Metrica_IO as mio
+import libraries.Metrica_IO as mio
 
 
 def plot_pitch( field_dimen = (106.0,68.0), field_color ='green', linewidth=2, markersize=20):
