@@ -1,5 +1,5 @@
 # Friends of Tracking
-This is a repository to showcase the skills I have learnt while completing a football analytics course by __Friends of Tracking (FoT)__. You can find all of their lectures and tutorials [here](https://www.youtube.com/channel/UCUBFJYcag8j2rm_9HkrrA7w). You can also find all of the code they use in their videos [here](https://github.com/Friends-of-Tracking-Data-FoTD).
+This is a repository to showcase the skills and concepts I have learnt while completing a football analytics course by __Friends of Tracking (FoT)__. You can find all of their lectures and tutorials [here](https://www.youtube.com/channel/UCUBFJYcag8j2rm_9HkrrA7w). You can also find all of the code they use in their videos [here](https://github.com/Friends-of-Tracking-Data-FoTD).
 
 ### My work
 1. Working with StatsBomb competition and match data ([notebook](https://github.com/prateek-senapati/friends-of-tracking/blob/main/1.%20Competition%20and%20Match%20Data.ipynb), [FoT video](https://www.youtube.com/watch?v=GTtuOt03FM0&list=PLedeYskZY0vBOdQ6Uc9eZjZ2-nz1JT3R7&index=3))
